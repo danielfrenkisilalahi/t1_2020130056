@@ -2,4 +2,4 @@
 
 https://dribbble.com/shots/20485745-Mobile-App-design-iOS-Android-ux-ui-designer
 
-![alt text](https://dribbble.com/shots/20485745-Mobile-App-design-iOS-Android-ux-ui-designer)
+![Employee data](https://dribbble.com/shots/20485745-Mobile-App-design-iOS-Android-ux-ui-designer "Employee Data title")
