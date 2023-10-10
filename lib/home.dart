@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:t1_2020130056/second_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -25,19 +26,29 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Row(
+                Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.air,
                       color: Colors.white,
                     ),
-                    Text(
-                      "Skip >",
-                      style: TextStyle(
-                        color: Color.fromARGB(58, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SecondPage(),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        "Skip >",
+                        style: TextStyle(
+                          color: Color.fromARGB(58, 255, 255, 255),
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     )
                   ],
@@ -57,50 +68,83 @@ class _HomePageState extends State<HomePage> {
                       "Workout plans designed to help you achive your fitness goals - wheter losing weight or building muscle",
                       style: TextStyle(
                         color: Colors.white,
+                        fontSize: 17,
                       ),
                     ),
                   ],
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SizedBox(
-                      width: 150.0,
-                      height: 50.0,
-                      child: SizedBox.expand(
-                        child: OutlinedButton(
-                          onPressed: () {
-                            debugPrint('Received click');
-                          },
-                          style: OutlinedButton.styleFrom(
-                            side: const BorderSide(
-                              width: 2,
-                              color: Colors.white,
-                            ),
-                            foregroundColor: Colors.white,
-                          ),
-                          child: const Text('Log In'),
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.circle_rounded,
+                          color: Color.fromARGB(255, 129, 127, 127),
+                          size: 10,
                         ),
-                      ),
+                        Icon(
+                          Icons.circle,
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          size: 10,
+                        ),
+                        Icon(
+                          Icons.circle,
+                          color: Color.fromARGB(255, 129, 127, 127),
+                          size: 10,
+                        ),
+                        Icon(
+                          Icons.circle,
+                          color: Color.fromARGB(255, 129, 127, 127),
+                          size: 10,
+                        ),
+                      ],
                     ),
-                    SizedBox(
-                      width: 150.0,
-                      height: 50.0,
-                      child: SizedBox.expand(
-                        child: OutlinedButton(
-                          onPressed: () {
-                            debugPrint('Received click');
-                          },
-                          style: OutlinedButton.styleFrom(
-                            side:
-                                const BorderSide(width: 2, color: Colors.white),
-                            foregroundColor: Colors.black,
-                            backgroundColor: Colors.white,
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                          width: 150.0,
+                          height: 50.0,
+                          child: SizedBox.expand(
+                            child: OutlinedButton(
+                              onPressed: () {
+                                debugPrint('Received click');
+                              },
+                              style: OutlinedButton.styleFrom(
+                                side: const BorderSide(
+                                  width: 2,
+                                  color: Colors.white,
+                                ),
+                                foregroundColor: Colors.white,
+                              ),
+                              child: const Text('Log In'),
+                            ),
                           ),
-                          child: const Text('Sign Up'),
                         ),
-                      ),
-                    )
+                        SizedBox(
+                          width: 150.0,
+                          height: 50.0,
+                          child: SizedBox.expand(
+                            child: OutlinedButton(
+                              onPressed: () {
+                                debugPrint('Received click');
+                              },
+                              style: OutlinedButton.styleFrom(
+                                side: const BorderSide(
+                                    width: 2, color: Colors.white),
+                                foregroundColor: Colors.black,
+                                backgroundColor: Colors.white,
+                              ),
+                              child: const Text('Sign Up'),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
                   ],
                 )
               ],
