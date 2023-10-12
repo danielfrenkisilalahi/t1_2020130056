@@ -86,15 +86,24 @@ class _HomePageState extends State<HomePage> {
                           color: Color.fromARGB(255, 129, 127, 127),
                           size: 10,
                         ),
+                        SizedBox(
+                          width: 10,
+                        ),
                         Icon(
                           Icons.circle,
                           color: Color.fromARGB(255, 255, 255, 255),
                           size: 10,
                         ),
+                        SizedBox(
+                          width: 10,
+                        ),
                         Icon(
                           Icons.circle,
                           color: Color.fromARGB(255, 129, 127, 127),
                           size: 10,
+                        ),
+                        SizedBox(
+                          width: 10,
                         ),
                         Icon(
                           Icons.circle,
