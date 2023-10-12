@@ -31,8 +31,9 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Icon(
-                      Icons.air,
+                      Icons.keyboard_double_arrow_down_outlined,
                       color: Colors.white,
+                      size: 40,
                     ),
                     GestureDetector(
                       onTap: () {
@@ -59,17 +60,17 @@ class _HomePageState extends State<HomePage> {
                     Text(
                       "Supplements",
                       style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        color: Colors.white,
-                        fontSize: 32,
-                      ),
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white,
+                          fontSize: 32,
+                          fontStyle: FontStyle.italic),
                     ),
                     Text(
                       "Workout plans designed to help you achive your fitness goals - wheter losing weight or building muscle",
                       style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 17,
-                      ),
+                          color: Colors.white,
+                          fontSize: 17,
+                          fontStyle: FontStyle.italic),
                     ),
                   ],
                 ),
@@ -100,6 +101,9 @@ class _HomePageState extends State<HomePage> {
                           color: Color.fromARGB(255, 129, 127, 127),
                           size: 10,
                         ),
+                        SizedBox(
+                          height: 100,
+                        )
                       ],
                     ),
                     Row(
